@@ -37,11 +37,12 @@ function buySlime() {
     }
 }
 
+
 function buyUndead() {
     if (golds >= minions[1]['cost']) {
         golds = golds - minions[1]['cost'];
 	minions[1]['owned']++;
-	minions[0]['cost'] = minions[1]['cost'] * 1.15;
+	minions[1]['cost'] = minions[1]['cost'] * 1.15;
 	document.getElementById("undead_cost").innerHTML= minions[1]['cost'];
     }
 }
@@ -50,7 +51,7 @@ function buyImp() {
     if (golds >= minions[2]['cost']) {
 	golds = golds - minions[2]['cost'];
 	minions[2]['owned']++;
-	minions[0]['cost'] = minions[2]['cost'] * 1.15;
+	minions[2]['cost'] = minions[2]['cost'] * 1.15;
 	document.getElementById("imp_cost").innerHTML= minions[2]['cost'];
     }
 }
